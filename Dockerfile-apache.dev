@@ -1,0 +1,7 @@
+FROM php:7.2.1-apache
+
+RUN a2enmod rewrite
+
+ENV DEBIAN_FRONTEND noninteractive
+RUN apt-get update && \
+    apt-get install g++
